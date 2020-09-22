@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import Playground from './container/Playground';
+import Timer from './container/Timer';
+import BetDetails from './container/BetDetails';
+import Comments from './container/Comments';
+import FrequentNumbers from './container/FrequentNumbers';
+import store from './redux/store'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <div className="header">
+          <h1>Interview Task</h1>
+        </div>
+        <div className="wrapper">
+          <Playground />
+          <div className="details">
+            <Timer />
+            <BetDetails />
+            <Comments />
+          </div>
+        </div>
+        <div className="footer">
+          <FrequentNumbers /> {/* bonus functionality with RANDOM frequence numbers */}
+        </div>
+      </div>
+    </Provider>
   );
 }
 

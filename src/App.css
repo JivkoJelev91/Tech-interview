@@ -1,38 +1,262 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header{
+  background-color: #b32317;
+  padding: 15px;
+}
+
+.header h1{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 0 9px #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer {
+  background-color: #b32317;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.footer h1{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 0 9px #fff;
+  text-align: center;
+}
+
+.footerNumbers{
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 4px solid #d5d5d5;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  margin: 0 7px;
 }
 
-.App-link {
-  color: #61dafb;
+.frequentNumbers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  position: absolute;
+  top: 67px;
+  bottom: 67px;
+  left: 0;
+  right: 0;
+}
+
+.playground{
+  display:grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(10, 1fr);
+  height: calc(100vh - 134px)
+}
+
+.playground .number {
+  padding: 15px 25px;
+  color: #696a6d;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding: 0 0 2px;
+  align-items: center;
+  border-right: 1px solid #9f9f9f;
+  border-bottom: 1px solid #9f9f9f;
+  color: #696a6d;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playground .choosedNumber{
+  background: #b32317;
+  color: #fff;
+}
+
+.playground .notAllowed{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.details{
+  padding: 0 20px;
+}
+
+.timerWrapper{
+  padding: 10px 20px;
+  grid-template-columns: 0.8fr 1.2fr;
+  display: grid;
+  align-items: center;
+}
+
+.timerWrapper .timer{
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.timerWrapper .timerTitle{
+  color: #6e6e6e;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 15px;
+}
+
+.inputWrapper{
+  display: grid;
+  grid-template-columns: 0.5fr 0.1fr 1.5fr 0.1fr;;
+  align-items: center;
+  padding: 5px 20px;
+  grid-gap: 0 10px
+}
+
+.inputWrapper .buttons{
+  cursor:pointer;
+}
+
+.inputWrapper .label{
+  color: #6e6e6e;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 15px;
+}
+
+.inputWrapper .inputNumber{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #b32317;
+  border-radius: 10px;
+}
+
+.inputWrapper input:focus{
+  outline: none;
+}
+
+.commentsWrapper{
+  padding: 0 20px;
+}
+
+.commentsWrapper .textOverflow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commentsWrapper .boldComments {
+  font-weight: bold;
+  color: #b32317;
+}
+
+.commentsWrapper .commentsTitle{
+  text-align: center;
+} 
+
+.commentsWrapper .circle{
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.commentsWrapper .circle li{
+  margin: 0.3em 0;   
+}
+
+.commentsWrapper .circle li:before{
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  width: 1em;
+  height: 1em;
+  padding: .5em;
+  margin-right: 1em;
+  border-radius: 50%;
+  border: .25em solid #ccc;
+  background: #000;
+  color: #fff;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+  .playground{
+    height: unset;
   }
-  to {
-    transform: rotate(360deg);
+  .wrapper{
+    display: block;
+  }
+  .commentsWrapper{
+    padding: 0 10px;
+  }
+  .footer{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inputWrapper{
+    padding: 0 10px;
+    grid-template-columns: 20% 10% 50% 10%;
+  }
+  .inputNumber{
+    padding: 10px;
+  }
+  .timerWrapper{
+    padding: 10px;
+  }
+  .commentsWrapper{
+    padding: 0;
+  }
+  .circle{
+    grid-template-columns: 1fr !important;
+  }
+  .number{
+    font-size: .9em !important;
+  }
+  .timer{
+    font-size: 1.9em !important;
   }
 }
