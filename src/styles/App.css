@@ -1,21 +1,5 @@
 @import '../styles/variables.css';
 
-/* --background: #b32317;
---full-height: 100%;
---full-width: 100%;
---color-white: #fff;
---playground-color: #696a6d;
---display-flex: flex;
---align-items-center: center;
---flex-wrap: wrap;
---justify-content-center: center;
---text-align-center: center;
---position-absolute: absolute; 
---border-radius-circle: 50%;
---display-grid: grid;
---cursor-pointer: pointer;
---cursor-not-allowed: not-allowed; */
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -179,7 +163,7 @@ body, html {
   grid-template-columns: 1fr 1fr;
 }
 .commentsWrapper .circle li{
-  margin: 0.3em 0;   
+  margin: 0.3em 0 0 0;   
 }
  
 .commentsWrapper .circle li:before{
