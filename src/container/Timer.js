@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { getComments } from '../redux/actions/playgroundActions';
-import '../App.css';
+import '../styles/App.css';
 
 const Timer = ({ getComments }) => {
   const duration = 179; // 3 minutes

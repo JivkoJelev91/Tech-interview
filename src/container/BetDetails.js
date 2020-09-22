@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import '../App.css';
+import '../styles/App.css';
 
 const BetDetails = ({ count }) => {
   const [bet, setBet] = useState(1);

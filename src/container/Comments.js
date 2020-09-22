@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getComments } from '../redux/actions/playgroundActions';
-import '../App.css';
+import '../styles/App.css';
 
 const Comments = ({ getComments, comments, count }) => {
     useEffect(() => {

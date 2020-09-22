@@ -4,9 +4,8 @@ import Playground from './container/Playground';
 import Timer from './container/Timer';
 import BetDetails from './container/BetDetails';
 import Comments from './container/Comments';
-import FrequentNumbers from './container/FrequentNumbers';
 import store from './redux/store'
-import './App.css';
+import './styles/App.css';
 
 const App = () => {
   return (
@@ -18,13 +17,12 @@ const App = () => {
         <div className="wrapper">
           <Playground />
           <div className="details">
-            <Timer />
-            <BetDetails />
+            <div className="betDetails">
+              <Timer />
+              <BetDetails />
+            </div>
             <Comments />
           </div>
-        </div>
-        <div className="footer">
-          <FrequentNumbers /> {/* bonus functionality with RANDOM frequence numbers */}
         </div>
       </div>
     </Provider>

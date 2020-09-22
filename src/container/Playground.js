@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { getCountOfSelectedNumbers } from '../redux/actions/playgroundActions';
-import '../App.css';
+import '../styles/App.css';
 
 const Playground = ({ getCountOfSelectedNumbers }) => {
   const [choosedNumbers, setChoosedNumbers] = useState(Array(80).fill().map((v, i) => false));

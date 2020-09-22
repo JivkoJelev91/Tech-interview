@@ -18,7 +18,6 @@ export const getComments = (...args) => dispatch => {
             type: GET_COMMENTS,
             payload: array
         });
-        dispatch(frequense());
     });
 }
 
@@ -26,15 +25,4 @@ export const getCountOfSelectedNumbers = count => dispatch => {
     return dispatch({ type: GET_COUNT, payload: count });
 }
 
-// Simulate most frequense numbers with math random
-export const frequense = () => dispatch => {
-    const nums = new Set();
-    while (nums.size !== 12) {
-        nums.add(Math.floor(Math.random() * 80) + 1);
-    }
-    dispatch({
-        type: GET_FREQUENCE_NUMBERS,
-        payload: [...nums]
-    });
-};
 

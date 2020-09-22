@@ -1,0 +1,19 @@
+:root {
+    --background: #b32317;
+    --full-height: 100%;
+    --full-width: 100%;
+    --color-white: #fff;
+    --playground-color: #696a6d;
+    --display-block: block;
+    --display-grid: grid;
+    --display-flex: flex;
+    --align-items-center: center;
+    --flex-wrap: wrap;
+    --justify-content-center: center;
+    --text-align-center: center;
+    --position-absolute: absolute; 
+    --border-radius-circle: 50%;
+    --cursor-pointer: pointer;
+    --cursor-not-allowed: not-allowed;
+    --overflow-hidden: hidden;
+}
